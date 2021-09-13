@@ -13,7 +13,8 @@
 #           - run: npm install
 #       - run: npm run test
 
-version: 2
+version: 2.1
+
 jobs:
   one:
     docker:
@@ -28,9 +29,9 @@ jobs:
   two:
     docker:
       -image: circleci/ruby:2.4.1
-      auth:
-        username: mydockerhub-user
-        password: $DOCKERHUB_PASSWORD
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - run: echo "A more familiar hi"
